@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Arduino: Compile",
+      "type": "shell",
+      "command": "arduino-cli",
+      "args": ["compile", "--fqbn", "arduino:avr:uno", "${workspaceFolder}"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Arduino: Upload",
+      "type": "shell",
+      "command": "arduino-cli",
+      "args": ["upload", "-p", "COM7", "--fqbn", "arduino:avr:uno", "${workspaceFolder}"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Arduino: Compile + Upload",
+      "type": "shell",
+      "command": "arduino-cli",
+      "args": ["compile", "-u", "-p", "COM7", "--fqbn", "arduino:avr:uno", "${workspaceFolder}"],
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true }
+    }
+  ]
+}
